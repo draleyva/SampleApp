@@ -7,6 +7,7 @@
 #include <string>
 #include <atomic>
 #include <vector>
+#include <map>
 #include <iterator>
 #include <unordered_map>
 

@@ -2,30 +2,53 @@
 
 #include "SampleApp.h"
 
-vector<string> test(vector<string>& A)
+
+
+int32_t decksOfCards(vector<string>& A)
 {
-  sort(A.begin(), A.end());
+  map<string, int32_t> cardmap;
 
-  std::string text = "The bat is in the sky";
+  // map counting repeared cards
+  for (auto x : A)
+    cardmap[x]++;
 
-  std::istringstream myiss(text);
-  vector<string> resultado(istream_iterator<string>{myiss}, istream_iterator<string>());
+  int32_t deck[4]{};
+  int64_t numbers[4]{};
+  char* card;
 
-  return A;
+  for (auto x : cardmap)
+  {
+    card = (char*)x.first.c_str();
+    //cout << x.first << endl;
+    switch (card[1])
+    {
+    case 'S':
+      deck[0]++;
+      numbers[0] += card[0];
+    case 'C':
+      deck[1]++;
+      numbers[1] += card[0];
+    case 'H':
+      deck[2]++;
+      numbers[2] += card[0];
+    case 'D':
+      deck[3]++;
+      numbers[3] += card[0];
+    }
+  }
+
+
+
+  return -1;
 }
 
-int32_t main(int32_t argn, char *args[])
+int32_t main(int32_t argn, char* args[])
 {
   std::cout << "SampleApp\n";
 
-  vector<string> A;
+  vector<string> cards({ "9C", "KS", "AC", "AH", "8D", "4C", "KD", "JC", "7D", "9D", "2H", "7C", "3C", "7S", "5C", "6H", "TH" });
 
-  A.push_back("B");
-  A.push_back("A");
-  A.push_back("A");
-
-  for (auto x : A)
-    cout << x << endl;
+  decksOfCards(cards);
 
   return 0;
 }
