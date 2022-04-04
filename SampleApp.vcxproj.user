@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerEnvironment>PATH=../../../../../SFTlibrary/.module/instantclient_12_2.$(PlatformArchitecture);../../../ext/dll$(PlatformArchitecture)/$(Configuration);../../../core/dll$(PlatformArchitecture)/$(Configuration);../../../../products/SISO/dll$(PlatformArchitecture)/$(Configuration)</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>./bin$(PlatformArchitecture)/$(Configuration)/$(TargetName)$(TargetExt)</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>
+    </LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment>PATH=../../../../../SFTlibrary/.module/instantclient_12_2.$(PlatformArchitecture);../../../ext/dll$(PlatformArchitecture)/$(Configuration);../../../core/dll$(PlatformArchitecture)/$(Configuration);../../../../products/SISO/dll$(PlatformArchitecture)/$(Configuration)</LocalDebuggerEnvironment>
+    <LocalDebuggerCommand>./bin$(PlatformArchitecture)/$(Configuration)/$(TargetName)$(TargetExt)</LocalDebuggerCommand>
+  </PropertyGroup>
+</Project>
